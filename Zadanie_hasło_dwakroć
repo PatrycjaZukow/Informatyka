@@ -1,0 +1,8 @@
+p=str(input("Podaj hasło:"))
+print("Złe hasło")
+
+Hasło=int(input("Podaj hasło:"))
+if Hasło==1234:
+    print("Dobre hasło")
+elif Hasło!=1234:
+    print("Złe hasło")
