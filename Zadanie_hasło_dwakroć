@@ -1,4 +1,4 @@
-p=str(input("Podaj hasło:"))
+p=input("Podaj hasło:")
 print("Złe hasło")
 
 Hasło=int(input("Podaj hasło:"))
