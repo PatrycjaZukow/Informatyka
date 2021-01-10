@@ -1,0 +1,50 @@
+
+import turtle
+import random
+import threading
+
+wn=turtle.Screen()
+wn.bgcolor("lightblue")
+
+T1 = turtle.Turtle()
+T1.color('green')
+T1.pensize(0)
+T1.shape('turtle')
+T1.penup()
+
+T2 = turtle.Turtle()
+T2.color('red')
+T2.shape('turtle')
+T2.penup()
+T2.setpos(150,150)
+
+T3 = turtle.Turtle()
+T3.color('red')
+T3.shape('turtle')
+T3.penup()
+T3.setpos(-150,150)
+
+class goniony(threading.Thread):
+    def run(self):
+      while (T2, T3) != T1:
+       r1 = random.randrange(-300,300)
+       r2 = random.randrange(-300,300)
+       T1.setpos(r1,r2)
+class ganiajacy(threading.Thread):       
+    def run(self):
+      while (T2, T3) != T1:
+        r1 = random.randrange(-300,300)
+        r2 = random.randrange(-300,300)
+        T2.goto(r1,r2)  
+        T3.goto(r1,r2)
+             
+w2 = ganiajacy()  
+w1 = goniony()
+w1.start()
+w2.start()
+
+
+wn.exitonclick() 
+
+turtle.done()  
+turtle.bye() 
